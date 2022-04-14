@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Templates</title>
+    <script>
+        function $scroll() {
+            if (scrollY !== 0) {
+                document.getElementById('nav').style.boxShadow = "0px 6px 16px 1px rgba(0, 0, 0, 0.49)"
+                document.getElementById('nav').style.transition = "all 0.3s"
+                    // document.getElementById('nav').style.marginTop = "0px"
+                if (window.innerWidth <= 576) {
+                    document.getElementById('nav').style.marginTop = "-5px"
+                } else {
+                    document.getElementById('nav').style.marginTop = "-42px"
+                }
+            } else if (screenY == 0) {
+                document.getElementById('nav').style.boxShadow = "none"
+                document.getElementById('nav').style.transition = "all 0.5s"
+                document.getElementById('nav').style.marginTop = "0px"
+            }
+            console.log()
+            console.log(scrollY);
+        }
+    </script>
+</head>
+
+<body onscroll="$scroll()">
+    <nav id="nav">
+        <!-- fixed container -->
+
+        <div class="fixed  position-fixed">
+
+        </div>
+        <!--  -->
+        <div class="navbar">
+            <div class="navbar_container">
+                <a href="#" class="point navbar_links logo">+7 495 123-45-67</a>
+                <div class="navbar_toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <a href="#home" class="point navbar_links">Главная</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#" class="point navbar_links">о театре</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#" class="point navbar_links">Наши постановки</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#" class="point navbar_links">партнеры театра</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#" class="point navbar_links">контакты</a>
+                    </li>
+                    <!-- <li class="navbar_btn">
+                        <button class="point" id="button"></button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
